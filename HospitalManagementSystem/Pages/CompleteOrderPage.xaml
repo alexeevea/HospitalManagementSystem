@@ -1,0 +1,21 @@
+﻿<Page x:Class="HospitalManagementSystem.Pages.CompleteOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Complete Order">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Выполнить назначение" FontSize="20" Margin="0,0,0,15"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Назначение:" FontSize="14" VerticalAlignment="Center" Width="100"/>
+            <ComboBox Name="OrderComboBox" Width="200" Height="30" FontSize="14" DisplayMemberPath="ExaminationType" SelectedValuePath="ID"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Отметить как выполненное" Click="CompleteOrder_Click" Width="150" Height="35" HorizontalAlignment="Left"/>
+    </Grid>
+</Page>

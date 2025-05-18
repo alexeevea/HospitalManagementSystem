@@ -1,0 +1,33 @@
+﻿<Window x:Class="HospitalManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hospital Management System" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Navigation Panel -->
+        <ListBox x:Name="NavigationListBox" SelectionChanged="NavigationListBox_SelectionChanged" Margin="10">
+            <ListBoxItem Content="Главная"/>
+            <ListBoxItem Content="Пациенты"/>
+            <ListBoxItem Content="Запись на приём"/>
+            <ListBoxItem Content="Редактировать приём"/>
+            <ListBoxItem Content="Расписание врачей"/>
+            <ListBoxItem Content="Мои приёмы"/>
+            <ListBoxItem Content="История болезни"/>
+            <ListBoxItem Content="Назначить обследование"/>
+            <ListBoxItem Content="Выписать рецепт"/>
+            <ListBoxItem Content="Результаты обследований"/>
+            <ListBoxItem Content="Назначения"/>
+            <ListBoxItem Content="Выполнить назначение"/>
+            <ListBoxItem Content="Добавить заметку"/>
+            <ListBoxItem Content="История пациента"/>
+            <ListBoxItem Content="Выход"/>
+        </ListBox>
+
+        <!-- Main Content -->
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
